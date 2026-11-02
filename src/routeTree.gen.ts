@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AbrirChamadoRouteImport } from './routes/abrir-chamado'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as LoginRouteImport } from './routes/login'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const AbrirChamadoRoute = AbrirChamadoRouteImport.update({
   path: '/abrir-chamado',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LoginRoute = LoginRouteImport.update({
   id: '/login',
   path: '/login',
@@ -32,30 +38,34 @@ const LoginRoute = LoginRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/abrir-chamado': typeof AbrirChamadoRoute
+  '/admin': typeof AdminRoute
   '/login': typeof LoginRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/abrir-chamado': typeof AbrirChamadoRoute
+  '/admin': typeof AdminRoute
   '/login': typeof LoginRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/abrir-chamado': typeof AbrirChamadoRoute
+  '/admin': typeof AdminRoute
   '/login': typeof LoginRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/abrir-chamado' | '/login'
+  fullPaths: '/' | '/abrir-chamado' | '/admin' | '/login'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/abrir-chamado' | '/login'
-  id: '__root__' | '/' | '/abrir-chamado' | '/login'
+  to: '/' | '/abrir-chamado' | '/admin' | '/login'
+  id: '__root__' | '/' | '/abrir-chamado' | '/admin' | '/login'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AbrirChamadoRoute: typeof AbrirChamadoRoute
+  AdminRoute: typeof AdminRoute
   LoginRoute: typeof LoginRoute
 }
 
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AbrirChamadoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/login': {
       id: '/login'
       path: '/login'
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AbrirChamadoRoute: AbrirChamadoRoute,
+  AdminRoute: AdminRoute,
   LoginRoute: LoginRoute,
 }
 export const routeTree = rootRouteImport

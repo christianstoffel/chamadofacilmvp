@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { createFileRoute, Link, redirect, useNavigate } from "@tanstack/react-router";
 import { AlertCircle, CheckCircle2, ClipboardList, Clock, Inbox, Loader2, LogOut, MessageCircle, RefreshCw, Search, ShieldX } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { toast } from "sonner";
 import { Logo } from "@/components/site-layout";
 import { StatusBadge } from "@/components/status-badge";
@@ -307,7 +307,7 @@ function Detalhes({ chamado }: { chamado: Chamado }) {
   );
 }
 
-function Info({ rotulo, valor }: { rotulo: string; valor: React.ReactNode }) {
+function Info({ rotulo, valor }: { rotulo: string; valor: ReactNode }) {
   return (
     <div>
       <dt className="text-xs text-muted-foreground">{rotulo}</dt>
