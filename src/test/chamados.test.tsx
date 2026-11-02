@@ -36,7 +36,7 @@ describe("regras do chamado", () => {
   it("monta link do WhatsApp com 55 e mensagem", () => {
     const url = linkWhatsapp({ nome: "Ana", whatsapp: "11912345678", numero: 7, assunto: "Impressora" });
     expect(url.startsWith("https://wa.me/5511912345678?text=")).toBe(true);
-    expect(decodeURIComponent(url.split("text=")[1])).toBe(
+    expect(decodeURIComponent(url.split("text=")[1] ?? "")).toBe(
       "Olá, Ana! Estou entrando em contato sobre seu chamado CF-000007, referente a Impressora.",
     );
   });
