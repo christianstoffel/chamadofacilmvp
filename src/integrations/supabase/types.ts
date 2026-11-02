@@ -14,13 +14,102 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      admin_users: {
+        Row: {
+          created_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      chamados: {
+        Row: {
+          assunto: string
+          categoria: string
+          created_at: string
+          descricao: string
+          email: string | null
+          id: string
+          nome: string
+          numero: number
+          observacoes_internas: string | null
+          status: string
+          updated_at: string
+          whatsapp: string
+        }
+        Insert: {
+          assunto: string
+          categoria: string
+          created_at?: string
+          descricao: string
+          email?: string | null
+          id?: string
+          nome: string
+          numero?: never
+          observacoes_internas?: string | null
+          status?: string
+          updated_at?: string
+          whatsapp: string
+        }
+        Update: {
+          assunto?: string
+          categoria?: string
+          created_at?: string
+          descricao?: string
+          email?: string | null
+          id?: string
+          nome?: string
+          numero?: never
+          observacoes_internas?: string | null
+          status?: string
+          updated_at?: string
+          whatsapp?: string
+        }
+        Relationships: []
+      }
+      chamados_rate_limit: {
+        Row: {
+          created_at: string
+          id: number
+          origem_hash: string
+        }
+        Insert: {
+          created_at?: string
+          id?: never
+          origem_hash: string
+        }
+        Update: {
+          created_at?: string
+          id?: never
+          origem_hash?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      criar_chamado: {
+        Args: {
+          p_assunto: string
+          p_categoria: string
+          p_descricao: string
+          p_email: string
+          p_nome: string
+          p_origem_hash: string
+          p_whatsapp: string
+        }
+        Returns: number
+      }
+      is_admin: { Args: never; Returns: boolean }
     }
     Enums: {
       [_ in never]: never
