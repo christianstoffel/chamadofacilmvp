@@ -99,7 +99,7 @@ As dependências e a organização real do código estão no próprio repositór
 O ChatGPT foi utilizado como parceiro de planejamento para selecionar a ideia, comparar alternativas, formular a tese de negócio e detalhar requisitos, UX, segurança, modelo de dados e critérios de aceite. O Lovable foi utilizado para gerar a implementação a partir de um mega prompt consolidado.
 
 - [Especificação e mega prompt utilizado](docs/mega-prompt.md)
-- Correções posteriores via prompt: **nenhuma informada até o momento**. Caso sejam feitas, documentar aqui o texto exato e o objetivo.
+- Correções posteriores via prompt: não foram necessários prompts adicionais de correção após a geração inicial.
 - Decisão de economia de créditos: restringir o MVP a um único prestador, um fluxo de chamados e funcionalidades essenciais; não gerar imagens por IA nem adicionar integrações externas.
 
 ## 8. Validação e segurança
