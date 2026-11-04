@@ -111,16 +111,35 @@ O ChatGPT foi utilizado como parceiro de planejamento para selecionar a ideia, c
 
 Uma varredura sem achados não equivale a garantia absoluta de segurança. Não publicar credenciais ou dados pessoais de clientes no repositório.
 
+
 ## 9. Evidências visuais
 
-Adicionar capturas de tela contendo **somente dados fictícios** antes da entrega final:
+As capturas abaixo demonstram as principais funcionalidades
+do MVP ChamadoFácil.
 
-- Página inicial.
-- Formulário de abertura de chamado.
-- Painel administrativo.
-- Detalhes do chamado.
+### Página inicial
 
-> Capturas ainda não adicionadas. Não são incluídos links para arquivos inexistentes.
+Apresentação da plataforma e acesso à abertura de chamados.
+
+![Página inicial](screenshots/1-landing-page.png)
+
+### Abertura de chamado
+
+Formulário público para registrar solicitações de suporte técnico.
+
+![Formulário de chamado](screenshots/2-abrir-chamado.png)
+
+### Painel administrativo
+
+Visualização dos indicadores e gerenciamento dos chamados.
+
+![Painel administrativo](screenshots/3-dashboard.png)
+
+### Detalhes do chamado
+
+Consulta das informações, atualização de status e observações.
+
+![Detalhes do chamado](screenshots/4-detalhes-chamado.png)
 
 ## 10. Como testar
 
