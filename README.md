@@ -4,7 +4,7 @@
 
 [**Acessar o MVP publicado**](https://chamadofacilmvp.lovable.app/)
 
-> Projeto acadêmico desenvolvido no curso de vibe coding da DIO, utilizando ChatGPT para definição e especificação do MVP e Lovable para implementação. É uma demonstração funcional, não um serviço comercial de suporte técnico.
+> Projeto desenvolvido no curso de vibe coding da DIO, utilizando ChatGPT para definição e especificação do MVP e Lovable para implementação. É uma demonstração funcional, não um serviço comercial de suporte técnico.
 
 ## 1. Problema e oportunidade
 
